@@ -1,26 +1,28 @@
-# Try running the index.js file directly:
+# Try running the two provided samples. What do you notice about the outputs?
+
+# Let's get started with packages, servers and Express.
 ```
-> node index.js
-```
-
-What happens?
-
-Let's fix it!
-
-# Begin by installing the core babel tools:
-npm install --save-dev babel-cli babel-core babel-preset-es2015 babel-preset-stage-0
-
-# Alternatively, it could be installed globally.
-
-# Add a package.json script to execute babel:
-```
-"scripts": {
-  "babel": "babel --presets es2015,stage-0 index.js -o build/index.js",
-},
+npm i --save-dev express
 ```
 
-# Finally, execute babel:
+# You will also need some helper modules:
 ```
-> npm run babel
-> open build/index.js
+npm i --save-dev body-parser cookie-parser multer
+```
+
+# Create your simplest server. Start with a file called server.js:
+``` js
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+   res.send('Hello World');
+})
+
+var server = app.listen(8081, function () {
+   var host = server.address().address
+   var port = server.address().port
+
+   console.log("Example app listening at http://%s:%s", host, port)
+})
 ```
