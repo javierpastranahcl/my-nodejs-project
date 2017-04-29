@@ -26,3 +26,7 @@ var server = app.listen(8081, function () {
    console.log("Example app listening at http://%s:%s", host, port)
 })
 ```
+
+# Exercise:
+Build a simple server that accepts an integer parameter and returns the sample post at at that index, building on the file `2-async-callbacks.js`.
+
