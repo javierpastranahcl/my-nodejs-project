@@ -4,6 +4,7 @@
   "description": "A React, Node and Babel training course",
   "main": "index.js",
   "scripts": {
+    "babel": "babel --presets es2015,stage-0 index.js -o build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +25,11 @@
   "homepage": "https://github.com/UncommonConcept/learn-frontend-in-48-hours#readme",
   "dependencies": {
     "colors": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
   }
 }
