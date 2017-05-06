@@ -1,8 +1,9 @@
 var express = require('express');
-var app = express();
 var fetch = require('isomorphic-fetch');
+var HttpStatus = require('http-status-codes');
+var app = express();
 
-app.get('/', function (req, res) {
+app.get('/api', function (req, res) {
    console.log(req.query);
 
    const dataSource = 'https://jsonplaceholder.typicode.com/posts';
@@ -11,7 +12,10 @@ app.get('/', function (req, res) {
     .then( (body) => {
       res.json(body[req.query.n]);
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      console.log(error);
+      res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ error: error });
+    });
 });
 
 var server = app.listen(8081, function () {
