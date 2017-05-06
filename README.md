@@ -1,16 +1,19 @@
-# Try running the two provided samples. What do you notice about the outputs?
+# From this branch forward, we will be building our Reddit application.
+### In this lesson, we will be building the backend API. While this is not strictly necessary (since Reddit provides its own open JSON API), this will allow us to demonstrate the relevant principles of express and Node, while avoiding the usage and creation of a far more complex backend.
 
-# Let's get started with packages, servers and Express.
+### Let's get started with packages, servers and Express.
 ```
-npm i --save-dev express
+npm i --save-dev express nodemon
 ```
 
-# You will also need some helper modules:
+Nodemon is a package that allows you to watch your project for changes, and it will automagically reload for you. Since we will be editing frequently, killing and restarting your server again and again will get very old, very fast.
+
+### You will also need some helper modules:
 ```
 npm i --save-dev body-parser cookie-parser multer
 ```
 
-# Create your simplest server. Start with a file called server.js:
+### Create your simplest server. Start with a file called index.js:
 ``` js
 var express = require('express');
 var app = express();
@@ -27,6 +30,9 @@ var server = app.listen(8081, function () {
 })
 ```
 
-# Exercise:
-Build a simple server that accepts an integer parameter and returns the sample post at at that index, building on the file `2-async-callbacks.js`.
-
+### Exercise:
+Build a server API that does the following:
+- Accepts a GET request on the '/' index route, and returns the Reddit JSON for that same route.
+- Generalize this function so that it can retrieve the JSON for any reddit path
+  - Reddit paths are /, r/<subreddit>
+  - Each one can also have top, new, hot
