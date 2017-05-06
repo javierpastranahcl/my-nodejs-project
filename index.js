@@ -4,13 +4,11 @@ var HttpStatus = require('http-status-codes');
 var app = express();
 
 app.get('/api', function (req, res) {
-   console.log(req.query);
-
-   const dataSource = 'https://jsonplaceholder.typicode.com/posts';
-   fetch(dataSource)
+  const dataSource = 'https://www.reddit.com/.json';
+  fetch(dataSource)
     .then(r => r.json())
-    .then( (body) => {
-      res.json(body[req.query.n]);
+    .then((body) => {
+      res.status(HttpStatus.OK).json(body);
     })
     .catch(error => {
       console.log(error);
