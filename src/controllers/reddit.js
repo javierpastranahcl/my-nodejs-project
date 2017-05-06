@@ -9,7 +9,7 @@ export class Reddit {
   }
 
   getRedditContent = (req, res) => {
-    // // Uncomment these and see how you can use them to generalize this approach.
+    // // Uncomment these and see what this request is actually receiving
     // console.log('====== url ======');
     // console.log(req.url);
     // console.log('====== category ======');
