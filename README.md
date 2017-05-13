@@ -8,3 +8,5 @@ In this exercise we will build a layout. This will comprise several steps:
 3. Add a footer and a menu
 
 We'll work through these together. The completed solution is in `reddit-project-frontend-04`.
+
+If we get through this before the end of the session, we will move on to the component lifecycle and state.
