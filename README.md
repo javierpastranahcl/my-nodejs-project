@@ -1,8 +1,7 @@
-# This branch shows the completed API.
+# React is just Javascript!
 
-### Follow-on exercises:
-- How can we merge the `home` and `subreddit` routes into just one?
-- Can you add query params to the URLs so that we can add pagination?
-  - Reddit pages are paginated using the 'after' param:
-    https://www.reddit.com/r/pics/top/.json?after=t3_69dhl7
-  - The value for 'after' is the `data.name` field of the item in the list you want to start after.
+## Let's practice a little
+Let's prove to ourselves that React is just javascript, by including event handling for functions commonly thought of as "Pure Javascript" - things like setInterval, window.onresize, etc.
+
+## We are going to create a TimeComponent that shows the clock.
+We'll work through this together in class. For the completed version, check out the next branch! (*react-project-frontend-02)
