@@ -1,38 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Avatar from './Avatar';
-import TimeComponent from './TimeComponent';
-import logo from './logo.svg';
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
 import './App.css';
 
 class App extends Component {
   render() {
-    const { title, content } = this.props;
+    const { content } = this.props;
 
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>{title}</h2>
-        </div>
-        <div className="App-intro">
-          {content}
-        </div>
-        <button className='App-Button' onClick={this.handleButtonClick}>Click me!</button>
-        <TimeComponent />
-        <Avatar user='gaearon' />
+        <Header />
+        <Content content={content} />
+        <Footer />
       </div>
     );
   }
 }
 
 App.propTypes = {
-  title: PropTypes.string.isRequired,
   content: PropTypes.node,
 };
 
 App.defaultProps = {
-  title: 'I like React!',
   content: <div className='container-div'><span>I am the very model of a modern major general!</span></div>,
 };
 
