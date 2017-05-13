@@ -1,4 +1,4 @@
-'use strict';
+
 
 var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
@@ -81,7 +81,7 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   },
-  
+
   module: {
     // First, run the linter.
     // It's important to do this before Babel processes the JS.
@@ -113,7 +113,7 @@ module.exports = {
           /\.(js|jsx)(\?.*)?$/,
           /\.css$/,
           /\.json$/,
-          /\.svg$/
+          /\.(png|jpg|svg)$/
         ],
         loader: 'url',
         query: {
@@ -127,7 +127,7 @@ module.exports = {
         include: paths.appSrc,
         loader: 'babel',
         query: {
-          
+
           // This is a feature of `babel-loader` for webpack (not Babel itself).
           // It enables caching results in ./node_modules/.cache/babel-loader/
           // directory for faster rebuilds.
@@ -149,6 +149,14 @@ module.exports = {
         test: /\.json$/,
         loader: 'json'
       },
+      {
+        test: /\.(png|jpg|svg)$/,
+        loader: 'url',
+        query: {
+          limit: 1000,
+          name: 'static/media/[name].[hash:8].[ext]'
+        }
+      },
       // "file" loader for svg
       {
         test: /\.svg$/,
@@ -161,7 +169,7 @@ module.exports = {
       // Remember to add the new extension(s) to the "url" loader exclusion list.
     ]
   },
-  
+
   // We use PostCSS for autoprefixing only.
   postcss: function() {
     return [

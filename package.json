@@ -33,6 +33,7 @@
     "colors": "^1.1.2",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {

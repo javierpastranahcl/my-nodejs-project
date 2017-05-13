@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
-const title = 'Welcome to React';
-
 ReactDOM.render(
-  <App title={title} />,
+  <App />,
   document.getElementById('root')
 );

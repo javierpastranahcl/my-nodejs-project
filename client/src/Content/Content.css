@@ -1,0 +1,14 @@
+.Content-Info-Column {
+  border: 1px solid aqua;
+  height:100vh;
+}
+
+.Content-Community-Column {
+  border: 1px solid lightsalmon;
+  height:100vh;
+}
+
+.Content-Main-Column {
+  border: 1px solid grey;
+  height:100vh;
+}
