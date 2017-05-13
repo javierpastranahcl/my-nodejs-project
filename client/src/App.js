@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Avatar from './Avatar';
 import TimeComponent from './TimeComponent';
 import logo from './logo.svg';
 import './App.css';
@@ -19,6 +20,7 @@ class App extends Component {
         </div>
         <button className='App-Button' onClick={this.handleButtonClick}>Click me!</button>
         <TimeComponent />
+        <Avatar user='gaearon' />
       </div>
     );
   }
