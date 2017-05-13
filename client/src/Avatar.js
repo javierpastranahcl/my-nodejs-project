@@ -7,8 +7,9 @@ const Avatar = (props) => {
 
   return (
     <div className='avatar-box'>
-      <PicComponent src='http://placehold.it/128x128' />
-      <LinkComponent href={'https://reddit.com/u/' + user} title={`Reddit user '${user}'`} />
+      <LinkComponent href={'https://reddit.com/u/' + user}>
+        <PicComponent src='http://placehold.it/128x128' />
+      </LinkComponent>
     </div>
   );
 };
