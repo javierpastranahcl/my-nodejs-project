@@ -8,7 +8,8 @@
     "watch-build-server": "BABEL_ENV=development babel --presets es2015,stage-0 -w server -d build/server",
     "test-server": "echo \"Error: no test specified\" && exit 1",
     "start-server": "npm run watch-build-server | NODE_ENV=development nodemon --watch build/server/ build/server/index.js",
-    "start": "node client/scripts/start.js | npm run start-server",
+    "start-project": "npm start | npm run start-server",
+    "start": "node client/scripts/start.js",
     "build": "node client/scripts/build.js",
     "test": "node client/scripts/test.js --env=jsdom"
   },
