@@ -6,10 +6,9 @@ class TimeComponent extends React.Component {
   constructor(props) {
     super(props);
 
-    const self = this;
     this.timer = setInterval(() => {
       // This is bad practice. There is a better way to do this!
-      self.forceUpdate();
+      this.forceUpdate();
     }, 1000);
   }
 
