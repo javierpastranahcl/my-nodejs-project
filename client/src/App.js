@@ -26,7 +26,7 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  content: <div className='container-div'><span>I am the very model of a modern major general!</span></div>,
+  content: <div className='container-div'><span>Hello new branch</span></div>,
 };
 
 export default App;
