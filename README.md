@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React is just Javascript!
 
 ## Building a Layout
@@ -10,3 +11,8 @@ In this exercise we will build a layout. This will comprise several steps:
 We'll work through these together. The completed solution is in `reddit-project-frontend-03`.
 
 If we get through this before the end of the session, we will move on to the component lifecycle and state.
+=======
+# learn-frontend-in-48-hours
+
+FEATURE 2 not ready to be checkin yet
+>>>>>> feature2
