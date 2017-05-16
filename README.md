@@ -10,3 +10,7 @@ In this exercise we will build a layout. This will comprise several steps:
 We'll work through these together. The completed solution is in `reddit-project-frontend-04`.
 
 If we get through this before the end of the session, we will move on to the component lifecycle and state.
+
+Playing with BRANCHES
+Fixed more stuff for bug 1234
+
